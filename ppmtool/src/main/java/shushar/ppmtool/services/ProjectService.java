@@ -22,7 +22,7 @@ try{
     return projectRepository.save(project);
 }catch(Exception e)
 {
-  throw new ProjectIdException("Project ID "+project.getProjectIdentifier().toUpperCase()+"already exists");
+  throw new ProjectIdException("Project ID "+project.getProjectIdentifier().toUpperCase()+" already exists");
 }
 
 
