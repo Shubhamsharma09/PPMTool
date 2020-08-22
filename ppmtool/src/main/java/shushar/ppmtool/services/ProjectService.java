@@ -28,4 +28,19 @@ try{
 
 }
 
+public Project findProjectByIdentifier(String projectId)
+{
+    Project project =projectRepository.findByProjectIdentifier(projectId.toUpperCase());
+  if(project == null)
+    throw new ProjectIdException("Project ID "+projectId+" doesn't exist");
+
+    return project;
+}
+
+public Iterable<Project> findAllProjects(){
+return projectRepository.findAll();
+}
+
+
+
 }
